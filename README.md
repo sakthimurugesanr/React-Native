@@ -11,13 +11,14 @@ Start here if you already know React web and want to learn React Native through 
 | [Main README — this file](./README.md) | Reading order, commands, project exercises, and code map | Start here |
 | [React web vs React Native comparison](./README_REACT_VS_REACT_NATIVE.md) | Tags, components, events, styling, forms, hooks, navigation, storage, and 16 side-by-side examples | Translate your existing React knowledge |
 | [Complete React Native guide](./REACT_NATIVE_COMPLETE_GUIDE.md) | Installation, Android Studio, iOS support, state management, validation, routing, architecture, and 80 interview questions | Learn topics in depth |
+| [React Native tools and libraries](./README_TOOLS_AND_LIBRARIES.md) | Frameworks, navigation, state, APIs, UI, forms, storage, animations, device features, testing, and React web equivalents | Choose tools for a practice project |
 
 The repository also has [project instructions](./AGENTS.md). These describe development conventions; they are not part of the beginner reading sequence.
 
 ## Recommended reading and practice order
 
 1. Read the [comparison tables](./README_REACT_VS_REACT_NATIVE.md#2-tags-and-native-component-equivalents): learn `View`, `Text`, `TextInput`, `Pressable`, and `FlatList`.
-2. Read [setup and tools](./REACT_NATIVE_COMPLETE_GUIDE.md#4-tools-and-installation-paths). Choose web preview, Expo Go, or a native development build according to your device/tooling.
+2. Read [setup and tools](./REACT_NATIVE_COMPLETE_GUIDE.md#4-tools-and-installation-paths) and the [tools and libraries catalogue](./README_TOOLS_AND_LIBRARIES.md). Choose web preview, Expo Go, or a native development build according to your device/tooling.
 3. Run the sample using the commands below.
 4. Complete Practice 1–4: components, local/shared state, navigation, and validated forms.
 5. Complete Practice 5–8: lists, APIs, persistence, and device testing.
