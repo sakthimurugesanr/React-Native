@@ -14,7 +14,6 @@ Start here if you already know React web and want to learn React Native through 
 | [Sample application README](./learning-app/README.md) | How to run the original sample and try its features | Practice with the app |
 | [Setup and verification status](./SETUP_STATUS.md) | What was installed/tested, platform limits, dependency findings, and manual checks | Understand actual verification |
 | [Guide copy inside learning-app](./learning-app/REACT_NATIVE_COMPLETE_GUIDE.md) | An additional copy of the learning guide | Reference an existing nested copy; use the root guide above for the main reading path |
-| [Status copy inside learning-app](./learning-app/SETUP_STATUS.md) | An additional status document | Reference the nested copy; use the root status above for the main reading path |
 
 The repository also has [root project instructions](./AGENTS.md) and [sample project instructions](./learning-app/AGENTS.md). These describe development conventions; they are not part of the beginner reading sequence.
 
