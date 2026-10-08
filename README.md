@@ -12,7 +12,7 @@ Start here if you already know React web and want to learn React Native through 
 | [React web vs React Native comparison](./README_REACT_VS_REACT_NATIVE.md) | Tags, components, events, styling, forms, hooks, navigation, storage, and 16 side-by-side examples | Translate your existing React knowledge |
 | [Complete React Native guide](./REACT_NATIVE_COMPLETE_GUIDE.md) | Installation, Android Studio, iOS support, state management, validation, routing, architecture, and 80 interview questions | Learn topics in depth |
 
-The repository also has [root project instructions](./AGENTS.md) and [sample project instructions](./learning-app/AGENTS.md). These describe development conventions; they are not part of the beginner reading sequence.
+The repository also has [project instructions](./AGENTS.md). These describe development conventions; they are not part of the beginner reading sequence.
 
 ## Recommended reading and practice order
 
@@ -23,25 +23,22 @@ The repository also has [root project instructions](./AGENTS.md) and [sample pro
 5. Complete Practice 5–8: lists, APIs, persistence, and device testing.
 6. Use the [interview questions](./REACT_NATIVE_COMPLETE_GUIDE.md#16-interview-questions-and-answers) to explain the features you built.
 
-## Choose the project folder before running commands
+## Run the project from the repository root
 
-This workspace currently contains app source/configuration in **two locations**: the root React Native folder and `learning-app/`. They are separate checkouts/copies for command purposes. Editing one does not automatically update the other.
+The app source and configuration linked in this README are tracked at the repository root. Use the folder containing package.json and src when running commands. A local nested copy may also exist, but its contents are not published as ordinary files in this GitHub repository.
 
-The original installed and previously verified sample is **`learning-app/`**. Use it for the quickest continuation. All practice source links below point to that sample. If you decide to work in the root app copy, run commands at the root and edit its `src/` instead. Avoid switching between the copies during an exercise.
-
-### Run the original sample
+### Web preview
 
 Open PowerShell in the React Native folder:
 
 ```powershell
-cd learning-app
 npm.cmd install
 npm.cmd run web
 ```
 
 When dependencies are already installed and unchanged, you can go straight to `npm.cmd run web`. Open the URL printed in the terminal; it is usually `http://localhost:8081` when that port is free. If a server is already running, use that server or stop it before starting another. Follow Expo's printed port if it selects a different one.
 
-For compatible Expo Go phone testing, from `learning-app/`:
+For compatible Expo Go phone testing, from the same repository root:
 
 ```powershell
 npm.cmd start
@@ -55,16 +52,7 @@ npm.cmd run android
 
 See [Android Studio setup](./REACT_NATIVE_COMPLETE_GUIDE.md#6-android-studio-and-android-sdk-setup) and [iOS development choices](./REACT_NATIVE_COMPLETE_GUIDE.md#7-ios-support-from-windows-and-macos). Local iOS Simulator/Xcode builds require a Mac; a web preview is not an Android/iOS device test.
 
-### Run the root app copy instead
-
-If your terminal is already in the root React Native folder, omit `cd learning-app`:
-
-```powershell
-npm.cmd install
-npm.cmd run web
-```
-
-This runs the root package.json and uses the root src directory. The original sample's prior verification does not automatically verify this separate copy.
+The prior verification record describes the original local sample. Verify the root project separately after installing its dependencies; those historical results do not automatically prove this checkout has been run.
 
 ## What the sample teaches
 
@@ -85,15 +73,15 @@ This is a local teaching demo. It has no backend, real account creation, or auth
 
 | File | Purpose | First thing to inspect |
 |---|---|---|
-| [Route layout](./learning-app/src/app/_layout.tsx) | Stack and screen titles | Stack.Screen configuration |
-| [Home](./learning-app/src/app/index.tsx) | Counter, learning cards, navigation actions | Store selectors and router.push |
-| [Registration](./learning-app/src/app/register.tsx) | Inputs, touched/errors, submission, keyboard layout | onChangeText, submit, and input props |
-| [Profile](./learning-app/src/app/profile.tsx) | Shared profile/counter and reset | Selectors, reset, return Home |
-| [Store](./learning-app/src/store.ts) | Shared state and actions | count, profile, increment, saveProfile, reset |
-| [Validation](./learning-app/src/validation.ts) | Pure field rules | validate(values) and its error object |
-| [Reusable UI](./learning-app/src/components/ui.tsx) | Page, Card, Action, styles | Pressable and style composition |
-| [Validation tests](./learning-app/tests/validation.test.ts) | Empty/valid/invalid cases | Expected user-visible rules |
-| [Package scripts](./learning-app/package.json) | Run/check commands and dependency versions | start, web, typecheck, lint, test |
+| [Route layout](./src/app/_layout.tsx) | Stack and screen titles | Stack.Screen configuration |
+| [Home](./src/app/index.tsx) | Counter, learning cards, navigation actions | Store selectors and router.push |
+| [Registration](./src/app/register.tsx) | Inputs, touched/errors, submission, keyboard layout | onChangeText, submit, and input props |
+| [Profile](./src/app/profile.tsx) | Shared profile/counter and reset | Selectors, reset, return Home |
+| [Store](./src/store.ts) | Shared state and actions | count, profile, increment, saveProfile, reset |
+| [Validation](./src/validation.ts) | Pure field rules | validate(values) and its error object |
+| [Reusable UI](./src/components/ui.tsx) | Page, Card, Action, styles | Pressable and style composition |
+| [Validation tests](./tests/validation.test.ts) | Empty/valid/invalid cases | Expected user-visible rules |
+| [Package scripts](./package.json) | Run/check commands and dependency versions | start, web, typecheck, lint, test |
 
 ## Practice 1: native components and styling
 
@@ -208,15 +196,14 @@ These are practice ideas, not additional applications already implemented in thi
 
 ## Checks before finishing an exercise
 
-Run from the project folder you edited. For the original sample:
+Run from the repository root after installing its dependencies:
 
 ```powershell
-cd learning-app
 npm.cmd run typecheck
 npm.cmd run lint
 npm.cmd test
 ```
 
-If you are already inside learning-app, omit the cd line. Run relevant manual interactions too: passing types or unit tests does not establish native keyboard/navigation behavior.
+Run relevant manual interactions too: passing types or unit tests does not establish native keyboard/navigation behavior.
 
 If a preview is blank, check the development terminal and JS bundle rather than assuming a page-shell HTTP response means the app has rendered. The initial sample bundle was slow; the [verification record](./SETUP_STATUS.md) explains the observed behavior.
