@@ -11,9 +11,6 @@ Start here if you already know React web and want to learn React Native through 
 | [Main README — this file](./README.md) | Reading order, commands, project exercises, and code map | Start here |
 | [React web vs React Native comparison](./README_REACT_VS_REACT_NATIVE.md) | Tags, components, events, styling, forms, hooks, navigation, storage, and 16 side-by-side examples | Translate your existing React knowledge |
 | [Complete React Native guide](./REACT_NATIVE_COMPLETE_GUIDE.md) | Installation, Android Studio, iOS support, state management, validation, routing, architecture, and 80 interview questions | Learn topics in depth |
-| [Sample application README](./learning-app/README.md) | How to run the original sample and try its features | Practice with the app |
-| [Setup and verification status](./SETUP_STATUS.md) | What was installed/tested, platform limits, dependency findings, and manual checks | Understand actual verification |
-| [Guide copy inside learning-app](./learning-app/REACT_NATIVE_COMPLETE_GUIDE.md) | An additional copy of the learning guide | Reference an existing nested copy; use the root guide above for the main reading path |
 
 The repository also has [root project instructions](./AGENTS.md) and [sample project instructions](./learning-app/AGENTS.md). These describe development conventions; they are not part of the beginner reading sequence.
 
