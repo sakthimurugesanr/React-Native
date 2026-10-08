@@ -128,6 +128,8 @@ const styles = StyleSheet.create({
 
 ## 4. Tools and installation paths
 
+For the full ordered workflow and commented Android/iOS build commands, use [Expo installation and builds](./README_INSTALLATION_AND_BUILDS.md). It covers this repository's root app, new Expo projects, development clients, EAS profiles, signing, and submission.
+
 “Google Studio” in this context means **Android Studio**, Google's Android IDE.
 
 | Tool | Purpose | When needed |
@@ -191,7 +193,6 @@ Do not rerun project creation over the existing sample. Use `npm.cmd install` in
 From this React Native folder:
 
 ```powershell
-cd learning-app
 npm.cmd install
 npm.cmd run typecheck
 npm.cmd start
@@ -345,7 +346,7 @@ learning-app/
 
 In Expo Router projects, screens live in the template's `app/` or `src/app/` directory and `_layout.tsx` configures layouts. The sample uses Expo Router in `src/app/`; this guide also shows direct React Navigation to explain the underlying building blocks.
 
-Keep the lockfile. After checkout use `npm ci` for a clean reproducible dependency install. Use `npx expo install <native-package>` for Expo-compatible versions. A JavaScript-only package can generally use npm. After changing native modules or config plugins, rebuild the development binary. Metro cache reset alone cannot add native code to an existing binary.
+Keep the lockfile. After checkout use `npm ci` for a clean reproducible dependency install. This repository's convention is `npx expo install <package>` for adding dependencies, including JavaScript libraries. After changing native modules or config plugins, rebuild the development binary. Metro cache reset alone cannot add native code to an existing binary.
 
 ## 9. Layout, styling, and components
 

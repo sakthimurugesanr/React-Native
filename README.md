@@ -9,6 +9,7 @@ Start here if you already know React web and want to learn React Native through 
 | Document | What you will find | When to use it |
 |---|---|---|
 | [Main README — this file](./README.md) | Reading order, commands, project exercises, and code map | Start here |
+| [Step-by-step Expo installation and builds](./README_INSTALLATION_AND_BUILDS.md) | Existing/new app setup, Android Studio, iOS/Xcode, commented commands, local/cloud builds, signing, submission, and troubleshooting | Install tools and build for Android/iOS |
 | [React web vs React Native comparison](./README_REACT_VS_REACT_NATIVE.md) | Tags, components, events, styling, forms, hooks, navigation, storage, and 16 side-by-side examples | Translate your existing React knowledge |
 | [Complete React Native guide](./REACT_NATIVE_COMPLETE_GUIDE.md) | Installation, Android Studio, iOS support, state management, validation, routing, architecture, and 80 interview questions | Learn topics in depth |
 | [React Native tools and libraries](./README_TOOLS_AND_LIBRARIES.md) | Frameworks, navigation, state, APIs, UI, forms, storage, animations, device features, testing, and React web equivalents | Choose tools for a practice project |
@@ -18,13 +19,15 @@ The repository also has [project instructions](./AGENTS.md). These describe deve
 ## Recommended reading and practice order
 
 1. Read the [comparison tables](./README_REACT_VS_REACT_NATIVE.md#2-tags-and-native-component-equivalents): learn `View`, `Text`, `TextInput`, `Pressable`, and `FlatList`.
-2. Read [setup and tools](./REACT_NATIVE_COMPLETE_GUIDE.md#4-tools-and-installation-paths) and the [tools and libraries catalogue](./README_TOOLS_AND_LIBRARIES.md). Choose web preview, Expo Go, or a native development build according to your device/tooling.
+2. Follow [step-by-step installation and builds](./README_INSTALLATION_AND_BUILDS.md), then consult the [tools and libraries catalogue](./README_TOOLS_AND_LIBRARIES.md). Choose web preview, Expo Go, or a native development build according to your device/tooling.
 3. Run the sample using the commands below.
 4. Complete Practice 1–4: components, local/shared state, navigation, and validated forms.
 5. Complete Practice 5–8: lists, APIs, persistence, and device testing.
 6. Use the [interview questions](./REACT_NATIVE_COMPLETE_GUIDE.md#16-interview-questions-and-answers) to explain the features you built.
 
 ## Run the project from the repository root
+
+For the complete setup, follow [Expo installation](./README_INSTALLATION_AND_BUILDS.md#3-install-and-run-this-existing-repository), [Android Studio](./README_INSTALLATION_AND_BUILDS.md#5-android-studio-setup-on-windows), [iOS/Xcode](./README_INSTALLATION_AND_BUILDS.md#7-ios-setup-and-local-development-on-a-mac), and [EAS cloud builds](./README_INSTALLATION_AND_BUILDS.md#8-configure-cloud-builds-with-eas). Each section explains prerequisites and includes commands with comments.
 
 The app source and configuration linked in this README are tracked at the repository root. Use the folder containing package.json and src when running commands. A local nested copy may also exist, but its contents are not published as ordinary files in this GitHub repository.
 
@@ -33,7 +36,7 @@ The app source and configuration linked in this README are tracked at the reposi
 Open PowerShell in the React Native folder:
 
 ```powershell
-npm.cmd install
+npm.cmd ci
 npm.cmd run web
 ```
 
@@ -54,6 +57,20 @@ npm.cmd run android
 See [Android Studio setup](./REACT_NATIVE_COMPLETE_GUIDE.md#6-android-studio-and-android-sdk-setup) and [iOS development choices](./REACT_NATIVE_COMPLETE_GUIDE.md#7-ios-support-from-windows-and-macos). Local iOS Simulator/Xcode builds require a Mac; a web preview is not an Android/iOS device test.
 
 The prior verification record describes the original local sample. Verify the root project separately after installing its dependencies; those historical results do not automatically prove this checkout has been run.
+
+### Start commands versus build commands
+
+| Goal | Command | Prerequisite |
+|---|---|---|
+| Start browser preview | npm.cmd run web | Installed dependencies |
+| Start Metro/open Android | npm.cmd run android | Connected device or running emulator |
+| Start Metro/open iOS Simulator | npm run ios | Mac and configured simulator |
+| Compile/install Android development app | npx.cmd expo run:android | Android SDK/JDK; install expo-dev-client for the client workflow |
+| Compile/install iOS development app | npx expo run:ios | Mac/Xcode; install expo-dev-client for the client workflow |
+| Cloud Android store build | npx.cmd eas-cli@latest build --platform android --profile production | EAS project, eas.json, app identifier/signing |
+| Cloud iOS store build | npx.cmd eas-cli@latest build --platform ios --profile production | EAS project, eas.json, Apple signing |
+
+The current android/ios npm scripts start Expo; they do not compile native binaries. Complete the [development client setup](./README_INSTALLATION_AND_BUILDS.md#6-build-your-android-development-app-locally) or [cloud build configuration](./README_INSTALLATION_AND_BUILDS.md#8-configure-cloud-builds-with-eas) before using its build commands. See [preview and production outputs](./README_INSTALLATION_AND_BUILDS.md#9-preview-and-production-builds) for APK, AAB, and iOS distribution differences.
 
 ## What the sample teaches
 
