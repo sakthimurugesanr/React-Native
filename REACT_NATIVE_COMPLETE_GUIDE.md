@@ -4,6 +4,8 @@ Prepared: 8 October 2026. Audience: you already understand React web and want to
 
 This is a practical learning handbook, not a promise that one document covers every platform API. Examples use TypeScript. The accompanying `learning-app` demonstrates stack navigation, a validated registration form, and shared state. Read `SETUP_STATUS.md` for what was actually installed and verified on this computer.
 
+For detailed tag, prop, event, styling, and platform comparisons with 16 side-by-side examples, read [React web vs React Native comparison](./README_REACT_VS_REACT_NATIVE.md).
+
 ## Contents
 
 1. [What React Native is and why use it](#1-what-react-native-is-and-why-use-it)
